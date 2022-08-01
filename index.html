@@ -9,13 +9,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/animate.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.0/animate.min.css">
+
 
     <title>Technology</title>
 
@@ -47,7 +47,7 @@
         /*Header section  css */
 
         #header {
-            background: url(/img/stars-bg.jpg) center center no-repeat;
+            background: url(stars-bg.jpg) center center no-repeat;
             background-size: cover;
             height: 100%;
             color: white;
@@ -55,6 +55,9 @@
             align-items: center;
         }
 
+        #header .container {
+           margin-top: 5%;
+        }
         #header img {
             padding: 0 0 20px 0;
             width: 80%;
@@ -140,7 +143,7 @@
             background-color: rgba(0, 0, 0, 0.5);
             width: 100%;
             height: 100%;
-            background-image: url(/img/eye.png);
+            background-image: url(eye.png);
             background-position: center center;
             background-repeat: no-repeat;
             opacity: 0;
@@ -183,6 +186,52 @@
             margin-bottom: -50px;
         }
 
+        /*Pricing styles here*/
+
+        #pricing {
+            padding: 5rem 0;
+            background-color: #f6f6f6;
+        }
+
+        #pricing .card .card-header {
+            background-color: #6e6e6e;
+            color: #fff;
+            transition: all 0.2s ease-in-out;
+        }
+
+        #pricing .card .standard {
+            background-color: #be2835;
+            font-size: 1.3em;
+            padding: 15px 0;
+        }
+
+        #pricing .card .card-header:hover {
+            background-color: #be2835;
+        }
+
+        #pricing .card {
+            margin-top: 20px;
+        }
+
+        /*contact section*/
+        #contact {
+            padding: 5rem 0;
+        }
+
+        /*Footer section styles here*/
+        #footer {
+            padding: 2rem 0;
+            background-color: #484848;
+            color: #fff;
+        }
+
+        #footer a {
+            color: white;
+        }
+        #footer .fa {
+            padding: 0 5px;
+        }
+
         /*Media Queries*/
 
         @media (max-width:768px) {
@@ -190,6 +239,7 @@
             /*header section styles here*/
             #header {
                 align-items: center;
+                height: 80%;
             }
 
             /*social section styles here*/
@@ -213,6 +263,10 @@
             #who hr {
                 margin: 8% auto;
             }
+
+            #footer {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -223,7 +277,7 @@
             <span class="navbar-toggler-icon">&#9776;</span>
         </button>
         <a href="#" class="navbar-brand">
-            <img src="/img/logo-small.png" class="img-fluid" alt="">
+            <img src="logo-small.png" class="img-fluid" alt="">
         </a>
         <div class="collapse navbar-collapse " id="navigation-bar">
             <ul class="navbar-nav ml-auto">
@@ -240,7 +294,7 @@
                     <a href="#why" class="nav-link">WHY</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#customers" class="nav-link">CUSTOMERS</a>
+                    <a href="#customer" class="nav-link">CUSTOMERS</a>
                 </li>
                 <li class="nav-item">
                     <a href="#pricing" class="nav-link">PRICING</a>
@@ -257,8 +311,8 @@
     <section id="header">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <img src="img/logo.png" class="img-fluid" alt="">
+                <div class="col-md-6 wow fadeIn" data-wow-delay="0.5s" data-wow-duration="2s" >
+                    <img src="logo.png" class="img-fluid" alt="">
                     <h2>THINGS WORK BETTER IN SPACE</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum qui ad, quisquam deleniti
                         reprehenderit consectetur ipsa blanditiis sit repudiandae placeat officiis corporis magnam dolor
@@ -269,7 +323,7 @@
                         culpa. Consequuntur, ipsa illo.</p>
                 </div>
 
-                <div class="col-md-6 header-right d-none d-md-block">
+                <div class="col-md-6 header-right d-none d-md-block wow fadeIn" data-wow-delay="1s" data-wow-duration="2s">
                     <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                         laudantium, totam rem aperiam.
                     </p>
@@ -287,7 +341,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row wow swing" data-wow-delay="2s">
                 <div class="col text-center">
                     <a href="#social">
                         <i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i>
@@ -300,7 +354,7 @@
 
     <!-- social section starts-->
     <section id="social">
-        <div class="container">
+        <div class="container wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1s">
             <div class="row">
                 <div class="col-md-6">
 
@@ -350,14 +404,13 @@
         </div>
 
     </section>
-
     <!-- social section ends-->
 
     <!--Who section starts-->
     <section id="who">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.5s" data-wow-duration="1s">
                     <h2>Who we are....</h2>
                     <hr align="left" width="50%">
                     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ratione
@@ -368,29 +421,28 @@
                     <button type="button" class="btn btn-who">Find out more</button>
                 </div>
 
-                <div class="col-md-6">
-                    <img src="/img/what-image.png" class="img-fluid" alt="">
+                <div class="col-md-6 wow fadeInRight" data-wow-delay="0.5s" data-wow-duration="1s">
+                    <img src="what-image.png" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
     </section>
 
     <!--work section-->
-
     <section id="work">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-md-12 wow fadeInUp">
                     <h2>Our latest work... </h2>
                     <hr align="left" width="30%">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="card">
                         <div class="work-img">
-                            <a href="#"><img src="img/buildings.jpg" class="card-img-top img-fluid" alt=""></a>
+                            <a href="#"><img src="buildings.jpg" class="card-img-top img-fluid" alt=""></a>
                             <div class="img-overlay"></div>
                         </div>
                         <div class="card-body">
@@ -401,10 +453,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.2s">
                     <div class="card">
                         <div class="work-img">
-                            <a href="#"><img src="img/fair.jpg" class="card-img-top img-fluid" alt=""></a>
+                            <a href="#"><img src="fair.jpg" class="card-img-top img-fluid" alt=""></a>
                             <div class="img-overlay"></div>
                         </div>
                         <div class="card-body">
@@ -415,10 +467,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
                     <div class="card">
                         <div class="work-img">
-                            <a href="#"><img src="img/city.jpg" class="card-img-top img-fluid" alt=""></a>
+                            <a href="#"><img src="city.jpg" class="card-img-top img-fluid" alt=""></a>
                             <div class="img-overlay"></div>
                         </div>
                         <div class="card-body">
@@ -429,10 +481,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.4s">
                     <div class="card">
                         <div class="work-img">
-                            <a href="#"><img src="img/rose.jpg" class="card-img-top img-fluid" alt=""></a>
+                            <a href="#"><img src="rose.jpg" class="card-img-top img-fluid" alt=""></a>
                             <div class="img-overlay"></div>
                         </div>
                         <div class="card-body">
@@ -445,10 +497,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.5s">
                     <div class="card">
                         <div class="work-img">
-                            <a href="#"><img src="img/skate.jpg" class="card-img-top img-fluid" alt=""></a>
+                            <a href="#"><img src="skate.jpg" class="card-img-top img-fluid" alt=""></a>
                             <div class="img-overlay"></div>
                         </div>
                         <div class="card-body">
@@ -459,10 +511,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.6s">
                     <div class="card">
                         <div class="work-img">
-                            <a href="#"><img src="img/track.jpg" class="card-img-top img-fluid" alt=""></a>
+                            <a href="#"><img src="track.jpg" class="card-img-top img-fluid" alt=""></a>
                             <div class="img-overlay"></div>
                         </div>
                         <div class="card-body">
@@ -473,10 +525,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.7s">
                     <div class="card">
                         <div class="work-img">
-                            <a href="#"><img src="img/goldengate.jpg" class="card-img-top img-fluid" alt=""></a>
+                            <a href="#"><img src="goldengate.jpg" class="card-img-top img-fluid" alt=""></a>
                             <div class="img-overlay"></div>
                         </div>
                         <div class="card-body">
@@ -487,10 +539,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.8s">
                     <div class="card">
                         <div class="work-img">
-                            <a href="#"><img src="img/girl-field.jpg" class="card-img-top img-fluid" alt=""></a>
+                            <a href="#"><img src="girl-field.jpg" class="card-img-top img-fluid" alt=""></a>
                             <div class="img-overlay"></div>
                         </div>
                         <div class="card-body">
@@ -516,21 +568,21 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 wow fadeIn" data-wow-delay="0.2s">
                     <i class="fa fa-thumbs-o-up fa-3x"></i>
                     <h3>Customer satisfication</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni molestias porro earum cum
                         assumenda laboriosam dolorem officiis eum amet eius obcaecati incidunt perferendis reprehenderit
                         ut fugiat natus, recusandae dicta?</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 wow fadeIn" data-wow-delay="0.3s">
                     <i class="fa fa-line-chart fa-3x"></i>
                     <h3>Instant Results</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni molestias porro earum cum
                         assumenda laboriosam dolorem officiis eum amet eius obcaecati incidunt perferendis reprehenderit
                         ut fugiat natus, recusandae dicta?</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 wow fadeIn" data-wow-delay="0.4s" >
                     <i class="fa fa-trophy fa-3x"></i>
                     <h3>Award winning service</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni molestias porro earum cum
@@ -543,7 +595,7 @@
 
     <!--Customer section-->
     <section id="customer">
-        <div class="container text-center">
+        <div class="container text-center wow fadeInUp" data-wow-delay="0.2s">
             <div class="row">
                 <div class="col">
                     <h2>Customers</h2>
@@ -559,7 +611,7 @@
                             <li data-target="#quotes" data-slide-to="1"></li>
                             <li data-target="#quotes" data-slide-to="2"></li>
                         </ol>
-                        <div class="carousel-inner">
+                        <div class="carousel-inner" role="listbox">
                             <div class="carousel-item active">
                                 <blockquote class="blockquote">
                                     <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
@@ -618,6 +670,171 @@
         </div>
     </section>
 
+    <!--Pricing section-->
+    <section id="pricing">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <h2>Pricing</h2>
+                    <hr width="30%">
+                    <p>Pricing structure for our services that cannot be beater...</p>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 wow fadeIn" data-wow-delay="0.4s">
+                    <div class="card">
+                        <div class="card-header">
+                            Basic
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"> <strong>2</strong> Profiles</li>
+                            <li class="list-group-item"> <strong>$10</strong> /month</li>
+                            <li class="list-group-item"> <strong>1GB</strong> Storage</li>
+                            <li class="list-group-item"> <strong>1GB</strong> Bandwidth</li>
+                            <li class="list-group-item"> <strong>1 </strong>FTP Account</li>
+                            <li class="list-group-item"> <strong>Website</strong> integration</li>
+                            <li class="list-group-item"> <strong>Basic</strong> Customization</li>
+                            <li class="list-group-item"> <strong>Email</strong> Support</li>
+                        </ul>
+                        <div class="card-body">
+                            <button type="button" class="btn btn-block btn-outline-info">SIGN UP</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 wow fadeIn" data-wow-delay="0.8s">
+                    <div class="card">
+                        <div class="card-header standard">
+                            Standard
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"> <strong>100</strong> Profiles</li>
+                            <li class="list-group-item"> <strong>$29</strong> /month</li>
+                            <li class="list-group-item"> <strong>50GB</strong> Storage</li>
+                            <li class="list-group-item"> <strong>50GB</strong> Bandwidth</li>
+                            <li class="list-group-item"> <strong>10</strong>FTP Account</li>
+                            <li class="list-group-item"> <strong>Website</strong> integration</li>
+                            <li class="list-group-item"> <strong>Advanced</strong> Customization</li>
+                            <li class="list-group-item"> <strong>Call</strong> Support</li>
+                        </ul>
+                        <div class="card-body">
+                            <button type="button" class="btn btn-outline-info btn-block">SIGN UP</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 wow fadeIn" data-wow-delay="0.4s">
+                    <div class="card">
+                        <div class="card-header">
+                            Basic
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"> <strong>Unlimited</strong> Profiles</li>
+                            <li class="list-group-item"> <strong>$59</strong> /month</li>
+                            <li class="list-group-item"> <strong>1TB</strong> Storage</li>
+                            <li class="list-group-item"> <strong>Unlimited</strong> Bandwidth</li>
+                            <li class="list-group-item"> <strong>100 </strong>FTP Account</li>
+                            <li class="list-group-item"> <strong>Website</strong> integration</li>
+                            <li class="list-group-item"> <strong>Advanced</strong> Customization</li>
+                            <li class="list-group-item"> <strong>24/7</strong> Support</li>
+                        </ul>
+                        <div class="card-body">
+                            <button type="button" class="btn btn-outline-info btn-block">SIGN UP</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--contact section-->
+    <section id="contact">
+        <div class="container text-center wow zoomIn" data-wow-delay="0.3s">  
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Contact us</h2>
+                    <hr width="30%"><br>
+                    <p>Need to get in touch? Fill in the form below for more information:</p><br>
+                </div>
+            </div>       
+            <div class="row">               
+                        <div class="col-md-6">
+                            <form action="">
+                            <fieldset class="form-group">
+                                <input type="email" class="form-control form-control-sm" id="email" placeholder="email...">
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <input type="text" class="form-control form-control-sm" id="name" placeholder="name...">
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <input type="text" class="form-control form-control-sm" id="subject" placeholder="subject...">
+                            </fieldset></form>
+                        </div>
+                        <div class="col-md-6">
+                            <form action="">
+                            <fieldset class="form-group">
+                                <textarea class="form-control form-control-sm" id="message" placeholder="message..." rows="3"></textarea>
+                            </fieldset>
+                            <button type="submit" class="btn btn-outline-info btn-block">submit</button>
+                        </form>
+                        </div>     
+            </div>
+            
+        </div>
+      </section>
+
+    <!--Footer section-->
+    <section id="footer">
+        <div class="container wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.5s">
+            <div class="row">
+                <div class="col-md-8 col-sm-6">
+
+                    <h3>About XL TEchnology</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos odio nulla ad omnis quo laboriosam alias doloribus voluptas? Dolorem quaerat, saepe quos quae a ex eos mollitia repudiandae maiores! Consequuntur!</p> 
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fa fa-facebook-f"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fa fa-wifi"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <h3>Say Hello</h3>
+                    <ul class="list-unstyled">
+                        <li> <p> <i class="fa fa-map-marker"></i> <strong>Address:</strong> :Location,Street,Pincode </p> </li>
+                        <li> <p> <i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="#">info@gmail.com</a> </p> </li>
+                        <li> <p> <i class="fa fa-phone"></i> <strong>Phone:</strong> +1234567908</p> </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        &copy;2016 Designed by Mrs.PrasannaRamesh
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
     <!-- Optional JavaScript -->
@@ -631,9 +848,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
-        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+        <!-- <script src="/wow.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script>
+            new WOW().init();
+            </script>
 </body>
 
 </html>
